@@ -186,7 +186,7 @@
                             <th>Nama Pemilik</th>
                             <th>Merk Kendaraan</th>
                             <th>Keluhan</th>
-                            <th width="180">Aksi</th>
+                            
                         </tr>
                     </thead>
 
@@ -201,24 +201,7 @@
                             <td>{{ $item->keluhan }}</td>
 
                             <td>
-                                <div class="d-flex gap-2 justify-content-center">
-
-                                    <a href="/kendaraan/{{ $item->id }}/edit"
-                                        class="btn btn-edit btn-sm">
-                                        Edit
-                                    </a>
-
-                                    <form action="/kendaraan/{{ $item->id }}"
-                                        method="POST"
-                                        onsubmit="return confirm('Hapus kendaraan dari antrean?')">
-
-                                        @csrf
-                                        @method('DELETE')
-
-                                        <button type="submit"
-                                            class="btn btn-delete btn-sm">
-                                            Hapus
-                                        </button>
+                                
                                     </form>
 
                                 </div>
